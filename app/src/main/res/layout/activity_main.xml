@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="阿波波 Mini"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="6dp"/>
+
+    <com.example.aboboomini.WaveformView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#121212" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button android:id="@+id/btnOpen" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="打开文件"/>
+        <Button android:id="@+id/btnPlay" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="播放"/>
+        <Button android:id="@+id/btnLoop" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="循环选择"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnAutoSegment" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="自动分句"/>
+        <Button android:id="@+id/btnSaveSegments" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="保存分句"/>
+        <Button android:id="@+id/btnLoadSegments" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="加载分句"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="未加载文件" />
+
+</LinearLayout>
